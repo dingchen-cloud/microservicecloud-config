@@ -8,38 +8,38 @@ server:
    port: 8001
 
 mybatis:
-    config-location: classpath:mybatis/mybatis.cfg.xml    #mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-    type-aliases-package: com.main.dc.entity       #ËùÓĞEntity±ğÃûÀàËùÔÚ°ü
-    mapper-locations: classpath:mybatis/mapper/**/*.xml   #mapperÓ³ÉäÎÄ¼ş
+    config-location: classpath:mybatis/mybatis.cfg.xml    #mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+    type-aliases-package: com.main.dc.entity       #æ‰€æœ‰Entityåˆ«åç±»æ‰€åœ¨åŒ…
+    mapper-locations: classpath:mybatis/mapper/**/*.xml   #mapperæ˜ å°„æ–‡ä»¶
 
 spring:
     profiles: dev
     application:
-      name: microservicecloud-config-dept-client       #·Ç³£ÖØÒª  ¾ÍÊÇ¶Ô
+      name: microservicecloud-config-dept-client       #éå¸¸é‡è¦  å°±æ˜¯å¯¹
     datasource: 
-         type: com.alibaba.druid.pool.DruidDataSource         # µ±Ç°Êı¾İ
-         driver-class-name: org.gjt.mm.mysql.Driver           # mysqlÇı¶¯°ü
-         url: jdbc:mysql://localhost:3306/cloudDB01           # Êı¾İ¿âÃû³Æ  8001
+         type: com.alibaba.druid.pool.DruidDataSource         # å½“å‰æ•°æ®
+         driver-class-name: org.gjt.mm.mysql.Driver           # mysqlé©±åŠ¨åŒ…
+         url: jdbc:mysql://localhost:3306/cloudDB01           # æ•°æ®åº“åç§°  8001
          username: root
          password: 123456
          dbcp2:
-           min-idle: 5                #Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Á¬½ÓÊı
-           initial-size: 5            #³õÊ¼»¯Á¬½ÓÊı
-           max-total: 5               #×î´óÁ¬½ÓÊı
-           max-wait-millis: 200       #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+           min-idle: 5                #æ•°æ®åº“è¿æ¥æ± çš„æœ€å°è¿æ¥æ•°
+           initial-size: 5            #åˆå§‹åŒ–è¿æ¥æ•°
+           max-total: 5               #æœ€å¤§è¿æ¥æ•°
+           max-wait-millis: 200       #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
            
 eureka:
-   client:       #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ  Ò²¾ÍÊÇ·şÎñÌá¹©·½
+   client:       #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…  ä¹Ÿå°±æ˜¯æœåŠ¡æä¾›æ–¹
      service-url:
         defaultZone: http://eureka7001.com:7001/eureka/
    instance:
-      instance-id: dept-8001.com     #¸øÔÚ²é¿´ä¯ÀÀÆ÷ÖĞÈë×¡ĞÅÏ¢µÄ Status  UP (1) - 192.168.1.100:mcloud-dept:8001 ¸ÄÃû            
-      prefer-ip-address: true                    #·ÃÎÊÂ·¾¶  Status  UP (1) - 192.168.1.100:mcloud-dept:8001 Êó±êÒÆÈë¿ÉÒÔÏÔÊ¾ IPµØÖ·    
+      instance-id: dept-8001.com     #ç»™åœ¨æŸ¥çœ‹æµè§ˆå™¨ä¸­å…¥ä½ä¿¡æ¯çš„ Status  UP (1) - 192.168.1.100:mcloud-dept:8001 æ”¹å            
+      prefer-ip-address: true                    #è®¿é—®è·¯å¾„  Status  UP (1) - 192.168.1.100:mcloud-dept:8001 é¼ æ ‡ç§»å…¥å¯ä»¥æ˜¾ç¤º IPåœ°å€    
            
-#½â¾öä¯ÀÀÆ÷ µã»÷ ·şÎñ×¢²á ÊÇ Ò³Ãæ±¨´í¶øÌí¼Ó   ÈÃÒ³ÃæÕ¹Ê¾Î¢·şÎñ×¢²áµÄĞÅÏ¢
+#è§£å†³æµè§ˆå™¨ ç‚¹å‡» æœåŠ¡æ³¨å†Œ æ˜¯ é¡µé¢æŠ¥é”™è€Œæ·»åŠ    è®©é¡µé¢å±•ç¤ºå¾®æœåŠ¡æ³¨å†Œçš„ä¿¡æ¯
 info:
   app.name: atguigu-microservicecloud
-  commpany.name: www.atguigu.com  #¹«Ë¾Ãû×Ö
+  commpany.name: www.atguigu.com  #å…¬å¸åå­—
   build.artifactId: $project.artifactId$
   build.version: $project.version$ 
 
@@ -48,37 +48,37 @@ server:
    port: 8001
 
 mybatis:
-    config-location: classpath:mybatis/mybatis.cfg.xml    #mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-    type-aliases-package: com.main.dc.entity       #ËùÓĞEntity±ğÃûÀàËùÔÚ°ü
-    mapper-locations: classpath:mybatis/mapper/**/*.xml   #mapperÓ³ÉäÎÄ¼ş
+    config-location: classpath:mybatis/mybatis.cfg.xml    #mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+    type-aliases-package: com.main.dc.entity       #æ‰€æœ‰Entityåˆ«åç±»æ‰€åœ¨åŒ…
+    mapper-locations: classpath:mybatis/mapper/**/*.xml   #mapperæ˜ å°„æ–‡ä»¶
 
 spring:
     profiles: test
     application:
-      name: microservicecloud-config-dept-client       #·Ç³£ÖØÒª  ¾ÍÊÇ¶Ô
+      name: microservicecloud-config-dept-client       #éå¸¸é‡è¦  å°±æ˜¯å¯¹
     datasource: 
-         type: com.alibaba.druid.pool.DruidDataSource         # µ±Ç°Êı¾İ
-         driver-class-name: org.gjt.mm.mysql.Driver           # mysqlÇı¶¯°ü
-         url: jdbc:mysql://localhost:3306/cloudDB01           # Êı¾İ¿âÃû³Æ  8001
+         type: com.alibaba.druid.pool.DruidDataSource         # å½“å‰æ•°æ®
+         driver-class-name: org.gjt.mm.mysql.Driver           # mysqlé©±åŠ¨åŒ…
+         url: jdbc:mysql://localhost:3306/cloudDB02           # æ•°æ®åº“åç§°  8001
          username: root
          password: 123456
          dbcp2:
-           min-idle: 5                #Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Á¬½ÓÊı
-           initial-size: 5            #³õÊ¼»¯Á¬½ÓÊı
-           max-total: 5               #×î´óÁ¬½ÓÊı
-           max-wait-millis: 200       #µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+           min-idle: 5                #æ•°æ®åº“è¿æ¥æ± çš„æœ€å°è¿æ¥æ•°
+           initial-size: 5            #åˆå§‹åŒ–è¿æ¥æ•°
+           max-total: 5               #æœ€å¤§è¿æ¥æ•°
+           max-wait-millis: 200       #ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
            
 eureka:
-   client:       #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ  Ò²¾ÍÊÇ·şÎñÌá¹©·½
+   client:       #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…  ä¹Ÿå°±æ˜¯æœåŠ¡æä¾›æ–¹
      service-url:
         defaultZone: http://eureka7001.com:7001/eureka/
    instance:
-      instance-id: dept-8001.com     #¸øÔÚ²é¿´ä¯ÀÀÆ÷ÖĞÈë×¡ĞÅÏ¢µÄ Status  UP (1) - 192.168.1.100:mcloud-dept:8001 ¸ÄÃû            
-      prefer-ip-address: true                    #·ÃÎÊÂ·¾¶  Status  UP (1) - 192.168.1.100:mcloud-dept:8001 Êó±êÒÆÈë¿ÉÒÔÏÔÊ¾ IPµØÖ·    
+      instance-id: dept-8001.com     #ç»™åœ¨æŸ¥çœ‹æµè§ˆå™¨ä¸­å…¥ä½ä¿¡æ¯çš„ Status  UP (1) - 192.168.1.100:mcloud-dept:8001 æ”¹å            
+      prefer-ip-address: true                    #è®¿é—®è·¯å¾„  Status  UP (1) - 192.168.1.100:mcloud-dept:8001 é¼ æ ‡ç§»å…¥å¯ä»¥æ˜¾ç¤º IPåœ°å€    
            
-#½â¾öä¯ÀÀÆ÷ µã»÷ ·şÎñ×¢²á ÊÇ Ò³Ãæ±¨´í¶øÌí¼Ó   ÈÃÒ³ÃæÕ¹Ê¾Î¢·şÎñ×¢²áµÄĞÅÏ¢
+#è§£å†³æµè§ˆå™¨ ç‚¹å‡» æœåŠ¡æ³¨å†Œ æ˜¯ é¡µé¢æŠ¥é”™è€Œæ·»åŠ    è®©é¡µé¢å±•ç¤ºå¾®æœåŠ¡æ³¨å†Œçš„ä¿¡æ¯
 info:
   app.name: atguigu-microservicecloud
-  commpany.name: www.atguigu.com  #¹«Ë¾Ãû×Ö
+  commpany.name: www.atguigu.com  #å…¬å¸åå­—
   build.artifactId: $project.artifactId$
   build.version: $project.version$
