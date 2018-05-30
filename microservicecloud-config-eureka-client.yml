@@ -17,7 +17,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false   
     service-url:
-      defaultZone: http://eureka.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
 ---
 server:
   port: 7001  #注册中心占用7001端口
@@ -32,4 +32,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false   
     service-url:
-      defaultZone: http://eureka.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
